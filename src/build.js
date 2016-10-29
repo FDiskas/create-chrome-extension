@@ -93,7 +93,7 @@ function makeExtension(options) {
   return function() {
     return new Promise((resolve, reject) => {
       // TODO detect system and Chrome path
-      const chromeBinaryPath = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+      const chromeBinaryPath = require('chrome-location');
       console.log(color.yellow(`Building extension into '${options.release}'`))
 
       setTimeout(() => {
