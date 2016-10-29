@@ -15,6 +15,7 @@ import overrideHotUpdater from './webpack/override'
 import * as log from './utils/log'
 import { prepareManifest }  from './shared'
 import webpackGenerator from './webpack/webpack.config.prod'
+import chromeBinaryPath from 'chrome-location'
 
 /**
  * Clear reelase directory
@@ -92,8 +93,6 @@ function webpackProduction(webpackConfig) {
 function makeExtension(options) {
   return function() {
     return new Promise((resolve, reject) => {
-      // TODO detect system and Chrome path
-      const chromeBinaryPath = require('chrome-location');
       console.log(color.yellow(`Building extension into '${options.release}'`))
 
       setTimeout(() => {
