@@ -12,7 +12,7 @@
     "build": "NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --source-maps inline --presets es2015 --plugins transform-object-rest-spread",
     "example": "npm run build && ./bin/chrome-extension run ./example/manifest.json -o ./build",
     "example:build": "npm run build && ./bin/chrome-extension build ./example/manifest.json -o ./release",
-    "prepublish": "npm run build",
+    "prepublish": "npm run snyk-protect; npm run build",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
@@ -66,7 +66,7 @@
     "url-loader": "0.6.0",
     "webpack": "2.2.0",
     "webpack-dev-server": "3.1.11",
-    "snyk": "^1.83.0"
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "6.14.0",
