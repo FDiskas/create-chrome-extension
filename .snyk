@@ -2034,3 +2034,5 @@ patch:
         patched: '2020-05-01T00:08:32.221Z'
     - babel-preset-target > compat-table > babel-preset-stage-0 > babel-preset-stage-1 > babel-preset-stage-2 > babel-preset-stage-3 > babel-plugin-transform-async-generator-functions > babel-helper-remap-async-to-generator > babel-helper-function-name > babel-template > babel-traverse > babel-types > lodash:
         patched: '2020-05-01T00:08:32.221Z'
+    - node-sass > lodash:
+        patched: '2020-05-03T07:00:11.838Z'
